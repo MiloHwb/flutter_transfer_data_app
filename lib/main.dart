@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'data_by_constructor.dart';
 import 'data_by_constructor_and_get_return.dart';
+import 'data_by_inherited_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -46,7 +47,16 @@ class Home extends StatelessWidget {
             child: Text('Sample 通过构造器传递数据，并获取返回数据'),
             textColor: Colors.white,
             color: Theme.of(context).primaryColor,
-          )
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DataByInheritedWidget()));
+            },
+            child: Text('Sample 通过InheritedWidget传递数据'),
+            textColor: Colors.white,
+            color: Theme.of(context).primaryColor,
+          ),
         ],
       ),
     );
