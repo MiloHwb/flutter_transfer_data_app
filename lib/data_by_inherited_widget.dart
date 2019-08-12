@@ -37,7 +37,7 @@ class DataByInheritedWidget extends StatelessWidget {
                       data: testData,
                     )));
           },
-          child: Text('Constructor传递数据'),
+          child: Text('Inherited传递数据'),
           textColor: Colors.white,
           color: Theme.of(context).primaryColor,
         ),
