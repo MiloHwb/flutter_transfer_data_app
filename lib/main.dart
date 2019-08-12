@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'data_by_constructor.dart';
+import 'data_by_constructor_and_get_return.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,7 +34,16 @@ class Home extends StatelessWidget {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => DataByConstructor()));
             },
-            child: Text('Sample 通过构造器（constructor）传递数据'),
+            child: Text('Sample 通过构造器传递数据'),
+            textColor: Colors.white,
+            color: Theme.of(context).primaryColor,
+          ),
+          RaisedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DataByConstructorAndGetReturn()));
+            },
+            child: Text('Sample 通过构造器传递数据，并获取返回数据'),
             textColor: Colors.white,
             color: Theme.of(context).primaryColor,
           )

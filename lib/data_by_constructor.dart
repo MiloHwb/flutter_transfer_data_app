@@ -40,6 +40,7 @@ class SubDataByConstructor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('构造器显示参数'),
+
       ),
       body: Center(
         child: Column(
