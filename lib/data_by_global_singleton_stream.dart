@@ -18,7 +18,7 @@ class DataByGlobalSingletonStream extends StatelessWidget {
             //创建数据
             TestData testData = TestData(name: 'Butch', age: 6, description: '可怜的流浪猫');
             TransferDataSingletonStream().setTestData(testData);
-            //跳转页面，通过构造器传递数据
+            //跳转页面
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => SubDataByGlobalSingletonStream()));
           },
