@@ -34,10 +34,11 @@ class DataByInheritedWidgetGeneric extends StatelessWidget {
             TestData testData = TestData(name: 'Spike', age: 5, description: '一只倒霉的斗牛犬');
             //跳转页面，通过InheritedWidget传递数据
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => IGenericDataProvider<TestData>(
-                      child: SubDataByInheritedWidgetGeneric(),
-                      data: testData,
-                    )));
+              builder: (context) => IGenericDataProvider<TestData>(
+                child: SubDataByInheritedWidgetGeneric(),
+                data: testData,
+              ),
+            ));
           },
           child: Text('Inherited 泛型传递数据'),
           textColor: Colors.white,

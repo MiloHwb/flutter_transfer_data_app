@@ -32,10 +32,11 @@ class Home extends StatelessWidget {
         if (timeCurrently - time > 2000) {
           time = timeCurrently;
           print('再按一次退出APP');
+          return Future.value(false);
         } else {
-          pop();
+          return Future.value(true);
+//          pop();
         }
-        return Future.value(false);
       },
       child: Scaffold(
         appBar: AppBar(
