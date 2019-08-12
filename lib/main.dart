@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'data_by_constructor.dart';
 import 'data_by_constructor_and_get_return.dart';
 import 'data_by_global_singleton.dart';
+import 'data_by_global_singleton_stream.dart';
 import 'data_by_inherited_widget.dart';
 import 'data_by_inherited_widget_generic.dart';
 
@@ -79,6 +80,13 @@ class Home extends StatelessWidget {
               onPressed: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => DataByGlobalSingleton())),
               child: Text('Sample 通过全局单例传递数据'),
+              textColor: Colors.white,
+              color: Theme.of(context).primaryColor,
+            ),
+            RaisedButton(
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => DataByGlobalSingletonStream())),
+              child: Text('Sample 全局单例结合Stream传递参数'),
               textColor: Colors.white,
               color: Theme.of(context).primaryColor,
             ),
